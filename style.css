@@ -1,14 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Nunito+Sans:wght@400;600&display=swap');
 :root{ --spi-navy:#173a59; --spi-teal:#2e9ca6; --spi-coral:#e07a5f; --spi-gold:#eaa12c; }
-body, p, span, div, li, td, label, input, select, textarea { font-family:'Nunito Sans', -apple-system, sans-serif !important; }
-h1, h2, h3, h4 { font-family:'Poppins', sans-serif !important; color:var(--spi-navy) !important; letter-spacing:-0.01em !important; }
+
+body, p, span, div, li, td, label, input, select, textarea {
+  font-family:'Nunito Sans', -apple-system, sans-serif !important;
+}
+h1, h2, h3, h4 {
+  font-family:'Poppins', sans-serif !important;
+  letter-spacing:-0.01em !important;
+}
 a { color:var(--spi-teal) !important; }
-a:hover { color:var(--spi-coral) !important; }
-button, input[type="submit"], .btn, .button, a.btn, a.button {
-  background:var(--spi-coral) !important; color:#fff !important; border:none !important;
-  border-radius:999px !important; padding:0.7em 1.5em !important; font-family:'Poppins', sans-serif !important;
-  font-weight:600 !important; box-shadow:0 4px 14px rgba(224,122,95,0.35) !important;
+
+/* Only the real action buttons get coral — by their text, not blanket */
+button[type="submit"],
+input[type="submit"],
+.book-now, .btn-book, .booking-button {
+  background:var(--spi-coral) !important;
+  color:#fff !important;
+  border:none !important;
+  border-radius:999px !important;
+  font-family:'Poppins', sans-serif !important;
+  font-weight:600 !important;
+  box-shadow:0 4px 14px rgba(224,122,95,0.3) !important;
 }
-button:hover, input[type="submit"]:hover, .btn:hover, .button:hover {
-  background:#d3674c !important;
+
+/* Make the hero headline readable over the photo */
+h1 {
+  color:#ffffff !important;
+  text-shadow:0 2px 12px rgba(0,0,0,0.55) !important;
 }
+/* Section headings stay navy on white */
+h2, h3 { color:var(--spi-navy) !important; }
